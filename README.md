@@ -16,7 +16,7 @@ Plantilla web de tipo Landing Page desarrollado con Laravel Blade, Laravel Livew
 - [NProgress v0.2.0](https://rstacruz.github.io/nprogress/)
 - [iziToast v1.4.0](https://izitoast.marcelodolza.com/)
 
-### Requerimientos
+## Requerimientos
 
 Necesitas tener instalado lo siguiente:
 - [PHP v8.0^](https://getcomposer.org/download/)
@@ -34,4 +34,18 @@ git clone https://github.com/Azcorra/plantilla-laravel-blade.git
 3. Acceda al directorio clonado usando el siguiente comando...
 ```bash
 cd plantilla-laravel-blade
+```
+### Instalar todas las dependencias de Composer
+1. Use el siguiente comando para instalar todas las dependencias...
+```bash
+composer install
+```
+### Crear el archivo .env
+1. Duplicar el archivo *.env.example* por *.env*
+2. Configure las credenciales para la conexión a la Base de Datos y la configuración para su servidor de correo...
+
+### Crear clave de la aplicación
+1. Puede generar una clave con el siguiente comando
+```bash
+php artisan key:generate
 ```
