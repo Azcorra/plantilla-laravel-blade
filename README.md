@@ -26,26 +26,42 @@ Necesitas tener instalado lo siguiente:
 
 ## Pasos de instalación
 ### Clone el repositorio de GitHub
-1. Abrir CMD en el directorio donde desea instalar el proyecto...
-2. Escriba el siguiente comando...
+1. Abrir CMD en el directorio donde desea instalar el proyecto
+2. Escriba el siguiente comando
 ```bash
 git clone https://github.com/Azcorra/plantilla-laravel-blade.git
 ```
-3. Acceda al directorio clonado usando el siguiente comando...
+3. Acceda al directorio clonado usando el siguiente comando
 ```bash
 cd plantilla-laravel-blade
 ```
 ### Instalar todas las dependencias de Composer
-1. Use el siguiente comando para instalar todas las dependencias...
+1. Use el siguiente comando para instalar todas las dependencias
 ```bash
 composer install
 ```
 ### Crear el archivo .env
 1. Duplicar el archivo *.env.example* por *.env*
-2. Configure las credenciales para la conexión a la Base de Datos y la configuración para su servidor de correo...
+2. Configure las credenciales para la conexión a la Base de Datos y la configuración para su servidor de correo
 
 ### Crear clave de la aplicación
 1. Puede generar una clave con el siguiente comando
 ```bash
 php artisan key:generate
+```
+### Crear base de datos
+1. Crear base de datos a traves del gestor de base de datos proporcionado por su servidor web
+> Nota: El nombre de la base de datos debe coincidir con el configurado en el archivo *.env*
+
+### Estructura de la base de datos
+> Se recomienda usar el método `php artisan` para importar la estructura de la base de datos, pero si cuenta con un archivo *.sql* de respaldo puede importarlo.
+1. Para generar las migraciones de la base de datos y crear las tablas ejecute el siguiente comando
+```bash
+php artisan migrate
+```
+
+### Ejecutar proyecto
+1. Inicie el proyecto ejecutando el comando `serve` de Laravel's Artisan CLI
+```bash
+php artisan serve
 ```
